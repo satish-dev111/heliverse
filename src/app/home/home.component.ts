@@ -127,8 +127,6 @@ if(filtertype === 'domain'){
       }
     });
   
-    // Logging the extracted data to the console
-    // console.log('Data', extractedDomain, extractedGender, extractedAvailability);
   
     // Assuming jsonData is an array of objects
     let data = this.jsonData;
@@ -143,10 +141,6 @@ if(filtertype === 'domain'){
     // You can update a display array or perform additional processing with the filtered data
     // For example, assuming you have a display array named 'displayData'
     this.displayData = intersection;
-  
-    // Log the filtered data to the console
-    console.log('Filtered Data:', intersection);
-
     this.heliverseData = intersection;
   }
 
@@ -176,8 +170,6 @@ if(filtertype === 'domain'){
     } else {
       alert('User Already exist')
     }
-
-    console.log(this.selectedUserData);
   }
   
 
