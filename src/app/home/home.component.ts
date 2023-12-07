@@ -68,14 +68,10 @@ export class HomeComponent implements OnInit {
   selectAll(filtertype: string) {
 if(filtertype === 'domain'){
   this.domainData.forEach((domain: any) => (domain.checked = this.selectAllDomain));
-  // this.getCheckedItemList('domain');
-  // console.log(this.domainData);
 } else if(filtertype === 'gender'){
   this.genderData.forEach((gender: any) => (gender.checked = this.selectAllGender));
-
 } else {
   this.availablityData.forEach((item: any) => (item.checked = this.selectAllAvailaiblity));
-  // console.log(this.availablityData);
 }
   }
 
@@ -85,19 +81,15 @@ if(filtertype === 'domain'){
 
     } else if(type === 'gender') {
       this.selectAllGender = this.checkSelected(type);
-  // console.log(this.genderData);
-
-      // this.getCheckedItemList(type);
+  
     } else {
       this.selectAllAvailaiblity = this.checkSelected(type);
-      // this.getCheckedItemList(type);
-  // console.log(this.availablityData);
+ 
 
     }
   }
 
   checkSelected(type: string): boolean {
-    // const items = type === 'domain' ? this.domainData : this.genderData;
     let items: any = [];
     if(type === 'domain'){
        items = this.domainData
@@ -136,7 +128,7 @@ if(filtertype === 'domain'){
     });
   
     // Logging the extracted data to the console
-    console.log('Data', extractedDomain, extractedGender, extractedAvailability);
+    // console.log('Data', extractedDomain, extractedGender, extractedAvailability);
   
     // Assuming jsonData is an array of objects
     let data = this.jsonData;
