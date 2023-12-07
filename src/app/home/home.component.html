@@ -74,7 +74,7 @@
     <button class="btn btn-warning" (click)="showUserList = !showUserList">Show User List</button>
   </div>
   <div class="col-12" *ngIf="showUserList">
-    <div class="card" style="margin-bottom: 1.5;" *ngFor="let data of selectedUserData">
+    <div class="card" style="margin-bottom: 1.5rem;" *ngFor="let data of selectedUserData">
       <img [src]="data.avatar" alt="Card image cap" style="min-width: 5rem; max-width: 9rem;">
           <div class="card-body">
             <h5 class="card-title">Name: {{data.first_name + " " + data.last_name}}</h5>
