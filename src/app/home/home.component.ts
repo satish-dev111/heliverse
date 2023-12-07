@@ -72,7 +72,7 @@ if(filtertype === 'domain'){
   // console.log(this.domainData);
 } else if(filtertype === 'gender'){
   this.genderData.forEach((gender: any) => (gender.checked = this.selectAllGender));
-  // console.log(this.genderData);
+
 } else {
   this.availablityData.forEach((item: any) => (item.checked = this.selectAllAvailaiblity));
   // console.log(this.availablityData);
@@ -82,8 +82,6 @@ if(filtertype === 'domain'){
   selectItem(type: string) {
     if (type === 'domain') {
       this.selectAllDomain = this.checkSelected(type);
-  //     // this.getCheckedItemList(type);
-  // console.log(this.domainData);
 
     } else if(type === 'gender') {
       this.selectAllGender = this.checkSelected(type);
