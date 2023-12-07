@@ -1,6 +1,7 @@
 <div class="container-fluid">
-<div class="row">
-  <div class="col-2">
+<div class="row" >
+  
+  <div class="col-3">
     <h3>Domains</h3>
     <div>
         <input type="checkbox" value="selectAllDomain" (change)="selectAll('domain')" [(ngModel)]="selectAllDomain" /> {{'Select All Domain'}}
@@ -39,8 +40,8 @@
 <div class="col-6">
     <div class="row" *ngIf="heliverseData.length > 0; else noDataTemplate">
       <div  class="col-md-6" *ngFor="let data of heliverseData | paginate: { itemsPerPage: 20, currentPage: p }">
-        <div class="card" style="margin-bottom: 25px;">
-          <img [src]="data.avatar" alt="Card image cap" height="150px" width="150px">
+        <div class="card" style="margin-bottom: 1.5rem;">
+          <img [src]="data.avatar" alt="Card image cap" style="min-width: 5rem; max-width: 9rem;">
           <div class="card-body">
             <h5 class="card-title">Name: {{data.first_name + " " + data.last_name}}</h5>
             <p class="card-text">Id: {{data.id}}</p>
@@ -59,7 +60,7 @@
   
   <ng-template #noDataTemplate>
     <div class="col-12 d-flex align-items-center justify-content-center" style="height: 100vh;">
-      <div class="card" style="margin-bottom: 25px;">
+      <div class="card" style="margin-bottom: 1.5rem;">
         <div class="card-body text-center">
           <h5 class="card-title">No Data to Show</h5>
         </div>
@@ -67,14 +68,14 @@
     </div>
   </ng-template>
 
-<div class="col-2">
+<div class="col-3">
   <h3>Selected User List</h3>
-    <div *ngIf="selectedUserData.length > 0" style="padding-bottom: 10px;">
+    <div *ngIf="selectedUserData.length > 0" style="padding-bottom: 1rem;">
     <button class="btn btn-warning" (click)="showUserList = !showUserList">Show User List</button>
   </div>
   <div class="col-12" *ngIf="showUserList">
-    <div class="card" style="margin-bottom: 25px;" *ngFor="let data of selectedUserData">
-      <img [src]="data.avatar" alt="Card image cap" height="150px" width="150px">
+    <div class="card" style="margin-bottom: 1.5;" *ngFor="let data of selectedUserData">
+      <img [src]="data.avatar" alt="Card image cap" style="min-width: 5rem; max-width: 9rem;">
           <div class="card-body">
             <h5 class="card-title">Name: {{data.first_name + " " + data.last_name}}</h5>
             <p class="card-text">Id: {{data.id}}</p>
